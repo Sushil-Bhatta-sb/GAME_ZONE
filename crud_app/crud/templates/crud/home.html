@@ -1,11 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>hello {{name}}</h1>
-</body>
-</html>
+{% extends "layout/main.html" %}
+{% block content %}
+
+<div class="hero">
+  <h1 class="fw-bold">Welcome to GameZone</h1>
+  <p class="lead">Explore, discover, and enjoy the best games in one place</p>
+</div>
+<div class="container mt-5">
+  <h2 class="text-center section-title">Popular Games</h2>
+
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="card game-card shadow">
+        <img src="https://wallpaper-house.com/data/out/11/wallpaper2you_469862.jpg" class="card-img-top" alt="Action Game">
+        <div class="card-body text-center">
+          <h5 class="card-title">Action Games</h5>
+          <ul class="list-unstyled small">
+            <li>Fast-paced adventures</li>
+            <li>Exciting combat and missions</li>
+            <li>High adrenaline gameplay</li>
+          </ul>
+          <a href="{% url 'action' %}" class="btn btn-primary btn-sm">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card game-card shadow">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b" class="card-img-top" alt="Sports Game">
+        <div class="card-body text-center">
+          <h5 class="card-title">Sports Games</h5>
+          <ul class="list-unstyled small">
+            <li>Football, cricket, racing</li>
+            <li>Realistic simulations</li>
+            <li>Competitive gameplay</li>
+          </ul>
+          <a href="{% url 'sports' %}" class="btn btn-success btn-sm">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card game-card shadow">
+        <img src="https://images.unsplash.com/photo-1553481187-be93c21490a9" class="card-img-top" alt="Strategy Game">
+        <div class="card-body text-center">
+          <h5 class="card-title">Strategy Games</h5>
+          <ul class="list-unstyled small">
+            <li>Planning and tactics</li>
+            <li>Resource management</li>
+            <li>Mind-challenging scenarios</li>
+          </ul>
+          <a href="{% url 'strategy' %}" class="btn btn-warning btn-sm">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card game-card shadow">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/multiplayer-1576688681.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*" class="card-img-top" alt="Multiplayer Game">
+        <div class="card-body text-center">
+          <h5 class="card-title">Multiplayer</h5>
+          <ul class="list-unstyled small">
+            <li>Play with friends</li>
+            <li>Competitive matches</li>
+            <li>Team-based challenges</li>
+          </ul>
+          <a href="#" class="btn btn-danger btn-sm">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-5 mb-5">
+  <div class="card shadow-sm border-primary">
+    <div class="card-body">
+      <h3 class="section-title text-primary fw-bold mb-3">
+        About <span class="text-warning">GameZone</span>
+      </h3>
+      <p class="fs-5 text-dark">
+        <strong class="text-success">GameZone</strong> is a <span class="text-info">web-based gaming platform</span> designed to showcase different types of games for players to explore. The platform is divided into multiple categories to help users find games that match their interests.
+      </p>
+      <h5 class="text-secondary fw-bold mt-4 mb-2">🎮 Game Categories:</h5>
+      <ul class="list-group list-group-flush mb-3">
+        <li class="list-group-item bg-light">
+            <a href="{% url 'action' %}">
+          <span class="badge bg-danger me-2">Action</span></a>
+          Fast-paced, thrilling adventures with missions and combat.
+        </li>
+        <li class="list-group-item bg-light">
+          <span class="badge bg-success me-2">Sports</span>
+          Football, cricket, racing, and other competitive sports experiences.
+        </li>
+        <li class="list-group-item bg-light">
+          <span class="badge bg-warning text-dark me-2">Strategy</span>
+          Planning, resource management, and mind-challenging challenges.
+        </li>
+        <li class="list-group-item bg-light">
+          <span class="badge bg-primary me-2">Multiplayer</span>
+          Team-based or competitive games to play with friends online.
+        </li>
+      </ul>
+      <h5 class="text-secondary fw-bold mt-4 mb-2">✨ Features:</h5>
+      <ul class="list-group list-group-flush mb-3">
+        <li class="list-group-item bg-light">
+          <i class="bi bi-check-circle-fill text-success me-2"></i>
+          Easy navigation and responsive UI for all devices
+        </li>
+        <li class="list-group-item bg-light">
+          <i class="bi bi-check-circle-fill text-success me-2"></i>
+          User authentication: Login, Register, and Logout
+        </li>
+        <li class="list-group-item bg-light">
+          <i class="bi bi-check-circle-fill text-success me-2"></i>
+          Clean design with categorized game sections
+        </li>
+        <li class="list-group-item bg-light">
+          <i class="bi bi-check-circle-fill text-success me-2"></i>
+          Expandable platform for adding more games in future
+        </li>
+      </ul>
+      <p class="fs-6 text-muted mt-3">
+        This layout provides a visually appealing, syllabus-friendly description of the games, their categories, and features, making it easier for users to read and understand.
+      </p>
+
+    </div>
+  </div>
+</div>
+
+</div>
+{% endblock %}
