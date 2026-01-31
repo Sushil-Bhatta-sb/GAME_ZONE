@@ -34,11 +34,39 @@ GAME_ZONE/
 └── db.sqlite3         # SQLite Database
 
 
-## 🛠️ Installation & Setup
+🛠️ Installation & Setup
+Follow these steps to get your development environment running:
 
-Follow these steps to get your development environment running locally:
-
-### 1. Clone the Project
-```bash
+1. Clone the Project
+Bash
 git clone [https://github.com/Sushil-Bhatta-sb/GAME_ZONE.git](https://github.com/Sushil-Bhatta-sb/GAME_ZONE.git)
 cd GAME_ZONE
+2. Create and Activate Virtual Environment
+Windows:
+
+Bash
+python -m venv venv
+venv\Scripts\activate
+Mac/Linux:
+
+Bash
+python3 -m venv venv
+source venv/bin/activate
+3. Install Django 6.0
+Bash
+pip install django
+4. Database Setup (Migrations)
+Apply the initial schema to your SQLite database:
+
+Bash
+python manage.py makemigrations
+python manage.py migrate
+5. Create a Superuser (Admin)
+To access the Django Admin panel and manage users:
+
+Bash
+python manage.py createsuperuser
+6. Run the Application
+Bash
+python manage.py runserver
+Visit the app at: http://127.0.0.1:8000/crud/
