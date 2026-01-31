@@ -1,5 +1,4 @@
-# CRUD_APP# 🎮 GAME_ZONE - Full-Stack Django CRUD with Authentication
-
+# LAB-4  CRUD_APP# 🎮 GAME_ZONE 
 **GAME_ZONE** is a robust web application built with **Django 6.0**. It allows users to manage a collection of games while providing a secure environment through a built-in Authentication system. This project is a perfect example of modern Django development involving models, views, and template namespacing.
 
 ## 🚀 Key Features
@@ -47,26 +46,26 @@ Windows:
 Bash
 python -m venv venv
 venv\Scripts\activate
+
 Mac/Linux:
 
 Bash
 python3 -m venv venv
 source venv/bin/activate
+
 3. Install Django 6.0
 Bash
 pip install django
+
 4. Database Setup (Migrations)
 Apply the initial schema to your SQLite database:
 
 Bash
 python manage.py makemigrations
 python manage.py migrate
-5. Create a Superuser (Admin)
-To access the Django Admin panel and manage users:
 
-Bash
-python manage.py createsuperuser
-6. Run the Application
+5. Run the Application
+
 Bash
 python manage.py runserver
 Visit the app at: http://127.0.0.1:8000/crud/
