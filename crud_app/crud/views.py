@@ -5,12 +5,6 @@ import datetime
 def home(request):
     return render(request,'crud/home.html')
 
-def index(request):
-  now = datetime.datetime.now()
-  return render(request, "crud/index.html", {
-  "newyear": now.month == 1 and now.day == 1
-})
-  
 def register_form(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
